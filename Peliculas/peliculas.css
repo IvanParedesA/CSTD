@@ -1,3 +1,11 @@
 h1 {
     color:black;
 }
+
+td {
+    color: blueviolet;
+}
+
+.favorito {
+    text-emphasis: filled red;
+}
