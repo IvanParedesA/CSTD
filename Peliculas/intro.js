@@ -78,6 +78,13 @@ console.log(oppenheimer);
 const despliega_rating = () => {
     const rating = "10/10 ¡Excelente!"
     oppenheimer.innerHTML = rating;
+    oppenheimer.onclick = despliega_nombre;
+}
+
+const despliega_nombre = () => {
+    const nombre = "Oppenheimer";
+    oppenheimer.innerHTML = nombre;
+    oppenheimer.onclick = despliega_rating;
 }
 
 oppenheimer.onclick = () => {
