@@ -92,4 +92,10 @@ oppenheimer.onclick = () => {
     despliega_rating();
 }
 
+// arreglos
 
+const arreglo = ["Elemento"];
+
+arreglo.push ("Otro elemento");
+
+arreglo[10] = "Uno más";
