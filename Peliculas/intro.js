@@ -77,6 +77,8 @@ console.log(oppenheimer);
 
 oppenheimer.onclick = () => {
     console.log("Hiciste click en Oppenheimer");
+    const rating = "10/10 ¡Excelente!"
+    oppenheimer.innerHTML = rating;
 }
 
 
