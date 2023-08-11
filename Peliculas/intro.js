@@ -126,3 +126,7 @@ const objeto = {
 
 console.log(objeto);
 console.log(objeto.atributo_1);
+
+for(let posicion in objeto) {
+    console.log(posicion);
+}
