@@ -70,7 +70,7 @@ const funcion_anonima = () => {
 
 funcion_anonima();
 
-//html dinámio con eventos
+//html dinámico con eventos
 const oppenheimer = document.getElementById("Oppenheimer");
 
 console.log(oppenheimer);
