@@ -64,6 +64,10 @@ vamonos();
 
 //funciones modernas
 
+const funcion_anonima = () => {
+    console.log("Esto es una función anónima");
+}
 
+funcion_anonima();
 
 
