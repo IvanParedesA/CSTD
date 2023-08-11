@@ -130,3 +130,12 @@ console.log(objeto.atributo_1);
 for(let posicion in objeto) {
     console.log(posicion);
 }
+
+function ejercicio_1() {
+    //Ejercicio del laboratorio
+    //....
+
+    document.getElementById("ejercicio_1").innerHTML = "Respuesta del ejercicio 1";
+}
+
+ejercicio_1();
