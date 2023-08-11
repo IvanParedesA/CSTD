@@ -99,3 +99,20 @@ const arreglo = ["Elemento"];
 arreglo.push ("Otro elemento");
 
 arreglo[10] = "Uno más";
+
+//arreglos asociativos
+arreglo["Once"] = "Otro más";
+
+//recorrido tradicional del arreglo
+for (let i = 0; i < arreglo.length; i++) {
+    console.log(arreglo[i]);
+}
+
+//recorridos alternativos del arreglo
+for(let posicion in arreglo) {
+    console.log(posicion);
+}
+
+for(let valor of arreglo) {
+    console.log(valor);
+}
