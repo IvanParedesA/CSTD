@@ -116,3 +116,13 @@ for(let posicion in arreglo) {
 for(let valor of arreglo) {
     console.log(valor);
 }
+
+//objetos (json: javascript object notation)
+const objeto = {
+    atributo_1: "valor_1",
+    atributo_2: "valor_2",
+    atributo_3: "valor_3",
+}
+
+console.log(objeto);
+console.log(objeto.atributo_1);
