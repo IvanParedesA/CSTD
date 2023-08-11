@@ -75,10 +75,14 @@ const oppenheimer = document.getElementById("Oppenheimer");
 
 console.log(oppenheimer);
 
-oppenheimer.onclick = () => {
-    console.log("Hiciste click en Oppenheimer");
+const despliega_rating = () => {
     const rating = "10/10 ¡Excelente!"
     oppenheimer.innerHTML = rating;
+}
+
+oppenheimer.onclick = () => {
+    console.log("Hiciste click en Oppenheimer");
+    despliega_rating();
 }
 
 
