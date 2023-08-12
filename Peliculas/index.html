@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Películas</title>
     <!--Estilo externo-->
-    <link rel="stylesheet" href="peliculas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
@@ -12,42 +14,45 @@
         </nav>
     </header>
     <main>
-        <h1>Películas</h1>
-        <p>
-            <en>cuando</en> <b>nosotros</b>  <i>escribimos</i> sobre <strong>películas</strong>
-        </p>
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Películas</h1>
+                <p>
+                    <en>cuando</en> <b>nosotros</b>  <i>escribimos</i> sobre <strong>películas</strong>
+                </p>
 
-        <h2>En cartelera</h2>
-        <table>
-            <tbody>
-                <tr>
-                    <td id="Oppenheimer">Oppenheimer</td>
-                </tr>
-                <tr>
-                    <!--Estilo en línea-->
-                    <td style="color:pink">Barbie</td>
-                </tr>
-            </tbody>
-            <thead>
-                <tr>
-                    <th>Película</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <td>Fecha: 10 de agosto de 2023</td>
-                </tr>
-            </tfoot>
-        </table>
+                <h2 class="title">En cartelera</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td id="Oppenheimer">Oppenheimer</td>
+                        </tr>
+                        <tr>
+                            <!--Estilo en línea-->
+                            <td style="color:pink">Barbie</td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th>Película</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td>Fecha: 10 de agosto de 2023</td>
+                        </tr>
+                    </tfoot>
+                </table>
 
-        <h3>Mis favoritas</h3>
-        <ol class="favorito">
-            <li>Jefe en pañales</li>
-            <li>Madagascar</li>
-        </ol>
+                <h3 class="title">Mis favoritas</h3>
+                <ol class="favorito">
+                    <li>Jefe en pañales</li>
+                    <li>Madagascar</li>
+                </ol>
 
-        <div id="ejercicio_1"></div>
-
+                <div id="ejercicio_1"></div>
+            </div>
+        </section>
     </main>
     <footer>
 
