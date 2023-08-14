@@ -36,213 +36,45 @@
         es la <strong>inteligencia artificial.</strong>
     </p>
 
-    <!--Formas-->
-    <h2>Formas</h2>
-    <p>Esta es una serie de ejemplos de algunas de las formas que se pueden utilizar en html</p>
-    <br><br>
-
-    <form>
-        <!--Texto-->
-        <label for="nombre">Ingresa tu nombre:</label>
-        <input type="text" placeholder="Juan Perez" name="nombre" id="nombre">
-        <br><br>
-
-        <!--Email-->
-        <label for="correo">Ingresa tu correo:</label>
-        <input type="email" placeholder="nombre@dominio.com" name="correo" id="correo">
-        <br><br>
-
-        <!--Color-->
-        <label for="color">Elige un color:</label>
-        <input type="color" name="color" id="color">
-        <br><br>
-
-        <!--Fecha-->
-        <label for="fecha">Selecciona una fecha:</label>
-        <input type="date" name="fecha" id="fecha">
-        <br><br>
-
-        <!--Número-->
-        <label for="numero">Introduce un número:</label>
-        <input type="number" name="numero" id="numero">
-        <br><br>
-
-        <!--Rango-->
-        <label for="rango">Rango:</label>
-        <input type="range" name="rango" id="rango" min="0" max="20">
-        <br><br>
-
-        <!--Tiempo-->
-        <label for="hora">Hora:</label>
-        <input type="time" name="tiempo" id="tiempo">
-        <br><br>
-
-        <!--Botón-->
-        <input type="submit" value="Enviar">
-        <br><br>
-    </form>
-
     <h2>Preguntas</h2>
     <ul>
-        <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
-        <p>El internet es el medio, es decir la conexión que hay entre todas las computadoras, mientras que
-            la World Wide Web es el conjunto de todos los sitios que existen en esta red.
+        <li>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</li>
+        <p>Aquel estilo que se ponga bajo la declaración !impotant en CSS es el que primordialmente va a estar activo 
+            en nuestra página web. De esta manera, yo recomendaría que se usara con cuidado ya que esencialmente se está 
+            rompiendo el principio de cascada bajo el cual fueron diseñadas las hojas de estilo. Si olvidamos que está
+            ahí podríamos tener problemas con las próximas instrucciones de estilo que se añadan. Pero por otro lado,
+            también recomendaría utilizarlo con sabiduría pues se le puede dar buen uso cuando queremos poner
+            alternativas de estilo a navegadores antiguos y nuevos.
         </p>
 
-        <li>¿Cuáles son las partes de un URL?</li>
-        <p>De acuerdo con Edix (2022), las partes de un URL son las siguientes:</p>
+        <li>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</li>
+        <p>Porque esta imagen se estará viendo todo el tiempo en tu página web y si tiene demasiados colores o Formas
+            irregulares, es posible que el texto se pierda y por ende, el lector se canse rápidamente. Además tenemos
+            que cuidar la resolución y el tamaño de la imagen ya que esta será abierta en una infinidad de dispositivos 
+            y es altamente probable que se muestre borrosa por ejemplo.
+        </p>
 
-            <!--Lista dentro de otra lista-->
-            <ul>
-                <li>Esquema: es el protocolo de inicio empleado para la transmisión de datos entre ordenadores y la 
-                    recuperación de la información de internet. En la mayor parte de los casos el esquema se 
-                    corresponde con: http o https.</li>
-                <li>Host: normalmente, para el protocolo http, el host es: www.</li>
-                <li>Dominio: corresponde con el nombre del dominio de cada sitio web, como: edix.com.</li>
-                <li>Puerto: define el nombre del puerto según el host. Para el protocolo http, el puerto por 
-                    defecto es 80, pero esta parte suele omitirse.</li>
-                <li>Directorio (o ruta): define el camino que se debe seguir en el servidor. Por ejemplo: blog.</li>
-                <li>Nombre de archivo: define detalladamente las características del documento. Por ejemplo:
-                videos-gratis</li>
-            </ul>
-            <br>
-        
-        <li>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</li>
-        <p>Con información de Williams Morales (2021), esta es la función de los diferentes métodos:</p>
-            <ul>
-                <li>GET es para obtener un recurso (lo usan todos los hipervínculos). Retorna tanto la cabecera como
-                    el contenido</li>
-                <li>HEAD es muy similar a GET con la diferencia de que se utiliza solo cuanto se 
-                    está interesado en el código de HTTP de Respuesta y el encabezado (Headers)</li>
-                <li>POST sí tiene body y este viene cifrado. Se usa cuando envías datos, por ejemplo
-                    contraseñas</li>
-                <li>PUT es similar al POST, pero este funciona para actualizar información existente.</li>
-                <li>PATCH igualmente es similar a los dos anteriores pero se utiliza para hacer moficaciones 
-                    parciales de un recurso en particular.</li>
-                <li>DELETE se utiliza para eliminar un recurso en específico</li>
-            </ul>
-            <br>
+        <li>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo 
+            entre %, px y pt?</li>
+        <p>Principalmente, % lo utilizamos para que un elemento de la página se vea igual sin depender 
+            de la pantalla en la que se está viendo, pero también cuando sea necesario hacer cálculos
+            rápidos del tamaño que estamos buscando en algo. px se debe usar cuando queremos 
+            ser más precisos en el tamaño que ocupará un elemento en la página y, por último, pt 
+            recomiendo usarlo cuando nos estemos basando un poco más en el tamaño del texto en la 
+            página.
+        </p>
 
-        <li>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y 
-            contraseña en algún sitio? ¿Por qué?</li>
-        <p>Se debe usar el método POST porque este cifra la información que mandas.</p>
+        <li>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</li>
+        <p>Porque mientras más pequeño sea el archivo de css más rápido podrá descargarse y procesarse en la
+            computadora de los usuarios.
+        </p>
 
-        <li>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un 
-            URL? </li>
-        <p>El método GET</p>
-
-        <li>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</li>
-        <p>Al contrario, este código significa que todo funciona correctamente.</p>
-
-        <li>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder 
-            al sitio y se encontró con un error 404? ¿Por qué?</li>
-        <p>No es responsabilidad del desarrollador ya que los codigos en el rango de los 400s son usualmente 
-            errores del cliente.</p>
-
-        <li>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder 
-            al sitio y se encontró con un error 500? ¿Por qué?</li>
-        <p>En este caso si es responsabilidad del desarrollador porque los errores en el rango de los 500s indican
-            un problema con el servidor web.</p>
-        
-        <li>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos 
-            de HTML 4 que en HTML5 estén desaprobados.</li>
-        <p>Significa que con la nueva actualización de html, este ha sido reemplazado por nuevos elementos que hacen 
-            lo mismo o mejoran las funciones. Aún así, muchos navegadores todavía soportan este tipo de atributos. 
-            A continuación algunos ejemplos:</p>
-            <ul>
-                <li>applet: Reemplazado por el tag HTML object.</li>
-                <li>dir: Reemplazado por el tag HTML ul.</li>
-                <li>isindex: Reemplazado por el tag HTML input.</li>
-                <li>menu: Reemplazado por el tag HTML ul.</li>
-            </ul>
-            <br>
-        
-        <li>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</li>
-        <p>Entre HTML4 y HTML5 es fácil darse cuenta de que algunos elementos y etiquetas tienen un nombre diferente 
-            o fueron sustituidas por otros atributos que hacen lo mismo pero con un cambio añadido. Sin embargo, 
-            otros cambios también están enfocados a elementos multimedia, seguridad y actualización, ya que no se tiene 
-            planeado un HTML6. Además, con las nuevas funcionalidades, HTML5 ya no es completamente dependiente de 
-            CSS o JavaScript.</p>
-
-        <li>¿Qué componentes de estructura y estilo tiene una tabla?</li>
-        <p>De acuerdo con (De León, s.f.) los componentes del elemento table son los siguientes:</p>
-            
-            <ul>
-                <li>caption: Provee un título para la tabla</li>
-                <li>colgroup: agrupa columnas temáticamente</li>
-                <li>col: aplica atributos comunes y estilos a una o más columnas. Sólo puede ser declarado 
-                    como hijo de colgroup.</li>
-                <li>tbody: representa a un cuerpo de la tabla.</li>
-                <li>thead: representa la sección de encabezado de la tabla.</li>
-                <li>tfoot: representa la sección de pie de la tabla.</li>
-                <li>tr: representa una fila. Puede ser declarado como hijo de tbody, thead, tfoot o table.</li>
-                <li>td: representa a una celda regular. Sólo puede ser declarado como hijo de tr.</li>
-                <li>th: representa a una celda de encabezado. Sólo puede ser declarado como hijo de tr.</li>
-            </ul>
-            <br>
-
-        <li>¿Cuáles son los principales controles de una forma HTML5?</li>
-        <p>Los principales controles son los siguientes:</p>
-            
-            <ul>
-                <li>number: campo de entrada para la introducción de un número</li>
-                <li>range: permite elegir entre un rango de valores</li>
-                <li>date: selector de fecha</li>
-                <li>color: permite al usuario elegir entre una selección de colores</li>
-                <li>datalist: permite a los usuarios elegir entre una lista de opciones sugeridas</li>
-                <li>tel: campo de entrada para un número telefónico</li>
-                <li>email: campo de entrada para un email</li>
-                <li>url: campo de entrada para un url</li>
-                <li>text: campo de entrada para texto</li>
-                <li>time: campo de entrada para una hora específica</li>
-            </ul>
-            <br>
-        
-        <li>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para 
-            descubrirlo: http://html5test.com/ </li>
-        <p>El navegador que utilizo es Firefox 116.0 y este tiene una calificación de 466 puntos de un total de 555.</p>
-
-        <li>¿Cuál es el ciclo de vida de los sistemas de información? </li>
-        <p>El ciclo de vida consiste en los siguientes pasos:</p>
-        <ul>     
-            <li>Fase de planificación: se prepara el diseño y posterior implementación del sistema.</li>  
-            <li>Fase de análisis: se busca concretar una serie de requisitos, que son los que regirán el 
-                nuevo sistema o los cambios a introducir en el antiguo.</li>     
-            <li>Fase de diseño: se identifican soluciones potenciales, se evalúan y se elige la más conveniente.</li>
-            <li>Fase de desarrollo: Inicio de la producción.</li>
-            <li>Fase de integración y periodo de pruebas: corroborar que el diseño propuesto cumple con los 
-                requisitos de negocio establecidos.</li>
-            <li>Fase de implementación: instalación del hardware y software elegidos, crear las aplicaciones 
-                correspondientes, someterlas a pruebas, crear la documentación pertinente y capacitar a 
-                los usuarios.</li>
-            <li>Fase de mantenimiento: consiste en introducir los ajustes necesarios para mejorar el rendimiento 
-                y corregir los problemas que puedan surgir. </li>
-            <li>Retiro del software: LA última etapa de un sistema de información ocurre cuando es finalmente 
-                desmantelado y no se le da mantenimiento ni uso nunca más.</li>
-        </ul>
-        <br>
-
-        <li>¿Cuál es el ciclo de desarrollo de sistemas de información? </li>
-        <p>En pocas palabras, el ciclo de desarrollo es el mismo que el ciclo de vida de un sistema, pero sin incluir
-            la parte del retiro del software.</p>
     </ul>
 
     <h2>Referencias</h2>
     <ul>
-        <li>Ciclo de vida de un sistema de información: fases y componentes. (s.f.).
-            https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-
-            fases-y-componentes</li>
-        <li>De León, D. P. (s.f.). Elemento table. https://www.htmlquick.com/es/reference/tags/table.html</li>
-        <li>Edix, R. (2022, 11 julio). ¿Qué es una URL? Aquí te lo contamos. Edix España. 
-            https://www.edix.com/es/instituto/que-es-url/</li>
-        <li>Es/Elementos de formulario adicionales del HTML5 - Web Education Community Group. (s.f.). 
-            https://www.w3.org/community/webed/wiki/Es/Elementos_de_formulario_adicionales_del_HTML5</li>
-        <li>Barron, B. (2021, 8 abril). HTML vs HTML5: Conoce las diferencias cruciales entre ellos. Kinsta®. 
-            https://kinsta.com/es/blog/html-vs-html5/</li>
-        <li>Morales, W. (2021, 1 junio). Métodos HTTP - POST, GET, PUT, DELETE. Estilo Web. 
-            http://estilow3b.com/metodos-http-post-get-put-delete/</li>
-        <li>05.Tags y atributos desaprobados en HTML - TODO HTML. (s. f.-b). 
-            https://sites.google.com/site/dwebhtml/reference/deprecated</li>
+        <li>Declaración !Important en CSS. (s. f.). DesarrolloWeb.com. 
+            https://desarrolloweb.com/articulos/declaracion-important-css.html</li>
     </ul>
 
     <footer>
