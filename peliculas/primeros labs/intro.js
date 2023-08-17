@@ -147,7 +147,7 @@ document.getElementById("favorita").onkeyup = () => {
     document.getElementById("favorita").style.color = `rgb(${red}, ${green}, ${blue})`;
 }
 
-const peliculas = [
+let peliculas = [
     {
         nombre: "Titanic",
         imagen: "https://i.etsystatic.com/27725708/r/il/3989d8/2912524873/il_fullxfull.2912524873_6vc1.jpg",
@@ -197,6 +197,8 @@ function genera_posters() {
                     
                         <div class="content">
                             ${pelicula.sinopsis}
+                            <br>
+                            <button class="button is-danger is-rounded" onclick=quitar("${pelicula.nombre}")>Quitar</button>
                         </div>
                     </div>
                 </div>
@@ -208,4 +210,20 @@ function genera_posters() {
     document.getElementById("posters").innerHTML = html;
 }
 
-genera_posters();
+function quitar(nombre) {
+    
+    let nuevas_peliculas = new Array();
+
+    for(let pelicula of peliculas) {
+
+        if (pelicula.nombre != nombre) {
+            nuevas_peliculas.push(pelicula);
+        }
+    }
+
+    peliculas = nuevas_peliculas;
+
+    genera_posters();
+}
+
+document.getElementById("boton_cartelera").onclick = genera_posters;
