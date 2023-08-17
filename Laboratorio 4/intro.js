@@ -109,3 +109,50 @@ function contador(inputArreglo) {
 
 //Llamamos a la función
 console.log(contador(arreglo));
+
+//==============
+//Ejercicio 4
+//==============
+
+document.write("<br> Ejercicio 4: <br><br>")
+
+//Definimos un arreglo de arreglos
+let arregloDeArreglos = [[1,2,3,4],[10,11,12,13],[25,26,27,28]];
+
+//Mostramos el arreglo de arreglos
+document.write("Este es un arreglo de arreglos: ");
+document.write("[[" + arregloDeArreglos[0] + "], [" + arregloDeArreglos[1] + "], [" + arregloDeArreglos[2] + "]] <br>");
+
+//Definimos la función
+function promedios(inputArreglo) {
+
+    //Arreglo para alojar los promedios
+    const arregloPromedios = [];
+
+    //Ciclo para obtener el promedio de cada uno de los arreglos
+    for(let i = 0; i < inputArreglo.length; i++) {
+
+        //Declaramos variables
+        let suma = 0;
+        let promedio = 0;
+        let contador = 0;
+
+        //Ciclo anidado que recorre los números de los arreglos internos
+        for(let j = 0; j < inputArreglo[i].length; j++) {
+            suma += inputArreglo[i][j];
+            contador++;
+        }
+
+        //Se obtiene el promedio
+        promedio = suma / contador;
+
+        //Introducimos el promedio en el nuevo arreglo
+        arregloPromedios.push(promedio);
+    }
+
+    //Mostramos cómo quedó el arreglo de promedios
+    document.write("Arreglo de promedios: " + "[" + arregloPromedios + "]" + "<br>");
+}
+
+//Llamamos a la función
+console.log(promedios(arregloDeArreglos));
