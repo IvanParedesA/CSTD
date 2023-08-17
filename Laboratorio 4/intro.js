@@ -2,7 +2,7 @@
 //Ejercicio 1
 //==============
 
-document.write("Ejercicio 1: <br><br>")
+document.write("Ejercicio 1: <br><br>");
 
 //Prompt para que el usuario ingrese un número
 const numero = Number(prompt("Inserte un número: "));
@@ -33,7 +33,7 @@ document.write(tabla);
 //Ejercicio 2
 //==============
 
-document.write("<br> Ejercicio 2: <br><br>")
+document.write("<br> Ejercicio 2: <br><br>");
 
 //Creamos variables para los números aleatorios
 let random1 = Math.floor(Math.random()*100);
@@ -68,7 +68,7 @@ if(respuesta == suma) {
 //Ejercicio 3
 //==============
 
-document.write("<br> Ejercicio 3: <br><br>")
+document.write("<br> Ejercicio 3: <br><br>");
 
 //Creamos el arreglo con números y lo ordenamos con .sort()
 let arreglo = [2, 5, -8, 0, 6, 3, -7, 3, 0, 4, 2, 9, -4, 8, 6, 0];
@@ -114,7 +114,7 @@ console.log(contador(arreglo));
 //Ejercicio 4
 //==============
 
-document.write("<br> Ejercicio 4: <br><br>")
+document.write("<br> Ejercicio 4: <br><br>");
 
 //Definimos un arreglo de arreglos
 let arregloDeArreglos = [[1,2,3,4],[10,11,12,13],[25,26,27,28]];
@@ -161,7 +161,7 @@ console.log(promedios(arregloDeArreglos));
 //Ejercicio 5
 //==============
 
-document.write("<br> Ejercicio 4: <br><br>")
+document.write("<br> Ejercicio 5: <br><br>");
 
 //Creamos una variable con un número de prueba
 let numeroPrueba = 123456789;
@@ -181,3 +181,38 @@ function inverso(inputNumero){
 
 //Llamamos a la función
 console.log(inverso(numeroPrueba));
+
+//==============
+//Ejercicio 6
+//==============
+
+document.write("<br> Ejercicio 6: <br><br>");
+
+//Definición de la clase Triángulo
+class Triangulo {
+
+    //Constructor
+    constructor(base, altura) {
+
+        //Atributos
+        this.base = base;
+        this.altura = altura;
+
+        //Métodos
+        this.medirPerimetro = function() {
+            let perimetro = base * 3;
+            document.write("El perímetro de este triángulo es: " + perimetro + "<br>");
+        }
+
+        this.medirArea = function() {
+            let area = (base * altura) / 2;
+            document.write("El área de este triángulo es: " + area + "<br>");
+        }
+    }
+}
+
+//Creamos un objeto de tipo triángulo
+let objetoTriangulo = new Triangulo(5, 3);
+
+objetoTriangulo.medirPerimetro();
+objetoTriangulo.medirArea();

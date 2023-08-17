@@ -15,7 +15,7 @@
         <h2>Instrucciones</h2>
         <ol>
             <li>Entrada: un número pedido con un prompt. Salida: Una tabla con los números del 1 al número dado con 
-                sus cuadrados y cubos. Utiliza document.write para producir la salida </li>
+                sus cuadrados y cubos. Utiliza document.write para producir la salida</li>
             <li>Entrada: Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. 
                 Salida: La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el 
                 usuario en escribir la respuesta. </li>
@@ -24,16 +24,88 @@
             <li>Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa: Un arreglo con los promedios 
                 de cada uno de los renglones de la matriz.</li>
             <li>Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.</li>
+            <li>Problema personalizado: Se desea saber cuál es el área y el perímetro de un triángulo equilatero 
+                utilizando un objeto de tipo "Triangulo" con los atributos "base" y "altura".</li>
         </ol>
         <br>
 
         <!--Enlace al archivo de Javascript-->
         <script src="intro.js" type="text/Javascript"></script>
 
-    </main>
-    <footer>
+        <h2>Preguntas</h2>
+        <br>
+        <ul>
+            <li>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</li><br>
+            <p>Por el nombre, muchos podrían pensar que estos dos lenguajes deben ser muy similares. Sin
+                embargo, ocurre todo lo contrario, ya que son lenguajes muy diferentes. A continuación Una
+                lista con algunas de sus diferencias.</p>
+            <br>
 
-    </footer>
+            <ul>
+                <li>Java es un lenguaje de programación orientado a objetos puros mientras que JavaScript 
+                    está basado en prototipos.</li><br>
+                <li>Java es un lenguaje compilado y JavaScript interpretado.</li><br>
+                <li>Java presenta un tipado fuerte, mientras que JavaScript tiene un tipado débil.</li><br>
+                <li>Java se ejecuta en la máquina virtual Java (JVM), mientras que JavaScript se ejecuta 
+                    en el navegador.</li><br>
+                <li>Java es un lenguaje de programación de tipo estático y JavaScript es dinámico.</li><br>
+            </ul>
+
+            <li>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</li><br>
+            <ul>
+                <li>Métodos getFullYear() Nos devuelve el año con 4 dígitos.</li><br>
+                <li>Método getMonth() Nos devuelve el número de mes del 0 (enero) al 11 (diciembre)</li><br>
+                <li>Método getDate()</li><br>
+                <li>Método getDay()</li><br>
+                <li>Método getHours()</li><br>
+                <li>Método getMinutes()</li><br>
+                <li>Métodos getSeconds() / getMilliseconds() / getTime()</li><br>
+                <li>Métodos toString() / toDateString() / toTimeString()</li><br>
+            </ul>
+
+            <li>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</li><br>
+            <ul>
+                <li>push() - Inserta un elemento al final del arreglo.</li>
+                <br>
+                <li>unshift() - Inserta un elemento al inicio del arreglo.</li>
+                <br>
+                <li>pop() - Remueve un elemento del final del arreglo.</li>
+                <br>
+                <li>shift() - Remueve un elemento del principio del arreglo.</li>
+                <br>
+                <li>slice() - Crea una copia sombra del arreglo.</li>
+                <br>
+            </ul>
+
+            <li>¿Cómo se declara una variable con alcance local dentro de una función?</li><br>
+            <p>Las variables locales son aquellas que se declaran dentro de un bloque de sentencias.
+                Estas variables se crean al comienzo del bloque y se destruyen al salir del bloque 
+                al que pertenecen.</p>
+            <br>
+
+            <li>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</li><br>
+            <p>Una variable es global cuando se declara fuera de todos los bloques. Las variables globales 
+                se conocen a lo largo de todo el programa y se pueden utilizar desde cualquier sitio. Todas 
+                las funciones y bloques declarados después de una variable global, podrán acceder a ella. 
+                La principal razón por la que debemos tener cuidado es que si se utiliza en una función, 
+                el valor de esta variable puede cambiar y permanecerá así incluso después de haber sido 
+                utilizada en una función. Debemos recordar que cambia de valor constantemente.</p>
+            <br>
+
+        </ul>
+
+        <h2>Referencias:</h2><br>
+        <p>Universidad Europea. (2022, 8 agosto). Diferencias entre Java y JavaScript. 
+            https://universidadeuropea.com/blog/diferencias-entre-java-y-javascript/</p><br>
+        <p>Digital Learning. (2017, 12 mayo). Métodos del objeto Date | Digital Learning. 
+            Digital Learning | Formación online en Nuevas Tecnologías. 
+            https://www.digitallearning.es/intro-programacion-js/metodos-date.html</p><br>
+        <p>Zubikarai, S. (2022, 12 enero). Manual de arreglos en JavaScript: Métodos de arreglos de 
+            JS explicados con ejemplos. freeCodeCamp.org. 
+            https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/</p><br>
+        <p>declaración de variables. (s. f.). https://ccia.ugr.es/%7Ejfv/ed1/c/cdrom/cap2/cap25.htm</p><br>
+
+    </main>
 </body>
 
 </html>
