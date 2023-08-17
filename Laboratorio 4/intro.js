@@ -156,3 +156,28 @@ function promedios(inputArreglo) {
 
 //Llamamos a la función
 console.log(promedios(arregloDeArreglos));
+
+//==============
+//Ejercicio 5
+//==============
+
+document.write("<br> Ejercicio 4: <br><br>")
+
+//Creamos una variable con un número de prueba
+let numeroPrueba = 123456789;
+
+//Mostramos el número de prueba
+document.write("Número de prueba: " + numeroPrueba + "<br>");
+
+//Definimos la función
+function inverso(inputNumero){
+
+    //Invertimos el número
+    let numeroInverso = Number(numeroPrueba.toString().split('').reverse().join(''));
+
+    //Imprimimos el número
+    document.write("Este es el número inverso: " + numeroInverso + "<br>");
+}
+
+//Llamamos a la función
+console.log(inverso(numeroPrueba));
