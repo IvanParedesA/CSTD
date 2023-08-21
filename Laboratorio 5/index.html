@@ -5,83 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Laboratorio 3</title>
+    <title>Laboratorio 5</title>
 </head>
 
 <body>
     <!--Encabezado-->
     <header>
-        <h3>13/08/2023</h3>
-        <h1 class="text-3xl font-bold underline">Laboratorio 3</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Logo_del_ITESM.svg" alt="logo tec" width="200px">
+        <div class="bg-gray-900 m-6 p-2 rounded-xl p-3">
+            <h1 class="text-6xl font-sans text-lime-600 text-center">Laboratorio 5</h1>
+        </div>
     </header>
 
-    <h2>Iván Ricardo Paredes Avilez</h2>
-    <h3>A01705083</h3>
-    <h3><em>a01705083@tec.mx</em></h3>
-    <h3>Construcción de Software y Toma de Decisiones</h3>
-    <!--Imagen-->
-    <img src="FotoComprimida.jpg" alt="Foto de perfil" width="200px">
+    <!--Parte central de la página-->
+    <main>
 
-    <p>¡Hola! Mi nombre es Iván.</p>
+        <!--Datos de contacto-->
+        <div class="container bg-gray-200 mx-auto p-3 rounded-xl">
+            <h3 class="text-center text-2xl">Construcción de Software y Toma de Decisiones</h3>
+            <br>
+            <h3 class="text-center text-2xl">20/08/2023</h3>
+            <br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Logo_del_ITESM.svg" alt="logo tec" width="100px" class="mx-auto">
+            <br>
+            <h2 class="text-center text-1xl">Iván Ricardo Paredes Avilez</h2>
+            <br>
+            <h3 class="text-center text-1xl">A01705083</h3>
+            <br>
+            <h3 class="text-center text-1xl"><em>a01705083@tec.mx</em></h3>
+            <br>
+            <img src="FotoComprimida.jpg" alt="Foto de perfil" width="200px" class="mx-auto">
+            <br>
+        </div>
 
-    <p>Actualmente estoy estudiando la carrera de 
-        <strong>ingeniería en tecnologías computacionales</strong> en el <em>Instituto Tecnológico de Monterrey, 
-        Campus Querétaro</em>. Uno de los deportes que más me gustan es el <strong>voleibol y el atletismo</strong>. 
-        Usualmente estas eran algunas de las actividades que realizo en mi momento libre, pero otra de mis grandes 
-        aficiones son los <strong>videojuegos</strong>. Ahora mismo he estado jugando el nuevo juego de 
-        <em>Zelda Tears of the Kingdom</em> y la verdad es que lo he disfrutado mucho estas vacaciones de verano. 
-        Otra de las cosas que me gustaría platicar de mi es que otra cosa que me atrae mucho de mi área de estudio 
-        es la <strong>inteligencia artificial.</strong>
-    </p>
+        <!--Contenido de la página-->
+        <div class="bg-gray-600 m-6 p-12 rounded-xl">
 
-    <h2>Preguntas</h2>
-    <ul>
-        <li>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</li>
-        <p>Aquel estilo que se ponga bajo la declaración !impotant en CSS es el que primordialmente va a estar activo 
-            en nuestra página web. De esta manera, yo recomendaría que se usara con cuidado ya que esencialmente se está 
-            rompiendo el principio de cascada bajo el cual fueron diseñadas las hojas de estilo. Si olvidamos que está
-            ahí podríamos tener problemas con las próximas instrucciones de estilo que se añadan. Pero por otro lado,
-            también recomendaría utilizarlo con sabiduría pues se le puede dar buen uso cuando queremos poner
-            alternativas de estilo a navegadores antiguos y nuevos.
-        </p>
+            <!--Texto acerca de mi-->
+            <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
+                <p>¡Hola! Mi nombre es Iván.</p>
+                <p>Actualmente estoy estudiando la carrera de 
+                    <strong>ingeniería en tecnologías computacionales</strong> en el <em>Instituto Tecnológico de Monterrey, 
+                    Campus Querétaro</em>. Uno de los deportes que más me gustan es el <strong>voleibol y el atletismo</strong>. 
+                    Usualmente estas eran algunas de las actividades que realizo en mi momento libre, pero otra de mis grandes 
+                    aficiones son los <strong>videojuegos</strong>. Ahora mismo he estado jugando el nuevo juego de 
+                    <em>Zelda Tears of the Kingdom</em> y la verdad es que lo he disfrutado mucho estas vacaciones de verano. 
+                    Otra de las cosas que me gustaría platicar de mi es que otra cosa que me atrae mucho de mi área de estudio 
+                    es la <strong>inteligencia artificial.</strong>
+                </p>
+            </div>
+            <br>
 
-        <li>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</li>
-        <p>Porque esta imagen se estará viendo todo el tiempo en tu página web y si tiene demasiados colores o Formas
-            irregulares, es posible que el texto se pierda y por ende, el lector se canse rápidamente. Además tenemos
-            que cuidar la resolución y el tamaño de la imagen ya que esta será abierta en una infinidad de dispositivos 
-            y es altamente probable que se muestre borrosa por ejemplo.
-        </p>
+            <!--Material Design-->
+            <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
+                <p><strong>Describe Material Design:</strong></p>
+                <br>
+                <p>Material design es un sistema de diseño visual desarrollado por Google con el objetivo de unificar 
+                    el diseño de aplicaciones web y móviles para que todo tenga una coherencia estética y funcional.
+                </p>
+                <br>
+                <p>Algunas de las características clave en las que se basa son las siguientes:</p>
+                <ul class="list-disc p-5">
+                    <li>Materialidad y Realismo</li>
+                    <li>Elevaciones y Sombras</li>
+                    <li>Colores Vibrantes y Accesibles</li>
+                    <li>Iconografía Clara</li>
+                    <li>Tipografía</li>
+                    <li>Animaciones y Transiciones</li>
+                    <li>Grid System</li>
+                    <li>Interacción Táctil y Gestual</li>
+                </ul>
+            </div>
+            <br>
 
-        <li>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo 
-            entre %, px y pt?</li>
-        <p>Principalmente, % lo utilizamos para que un elemento de la página se vea igual sin depender 
-            de la pantalla en la que se está viendo, pero también cuando sea necesario hacer cálculos
-            rápidos del tamaño que estamos buscando en algo. px se debe usar cuando queremos 
-            ser más precisos en el tamaño que ocupará un elemento en la página y, por último, pt 
-            recomiendo usarlo cuando nos estemos basando un poco más en el tamaño del texto en la 
-            página.
-        </p>
+            <!--Referencias-->
+            <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
+                <p><strong>Referencia:</strong></p>
+                <br>
+                <p>KeepCoding, R. (2022, 5 abril). ¿Qué es el material design? | KeepCoding Bootcamps. KeepCoding 
+                    Bootcamps. https://keepcoding.io/blog/que-es-material-design/</p>
+            </div>
+        </div>
+    </main>
 
-        <li>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</li>
-        <p>Porque mientras más pequeño sea el archivo de css más rápido podrá descargarse y procesarse en la
-            computadora de los usuarios.
-        </p>
-
-    </ul>
-
-    <h2>Referencias</h2>
-    <ul>
-        <li>Declaración !Important en CSS. (s. f.). DesarrolloWeb.com. 
-            https://desarrolloweb.com/articulos/declaracion-important-css.html</li>
-    </ul>
-
+    <!--Pie de página-->
     <footer>
-        Editor html utilizado en esta página web: Visual Studio Code
-        <br>
-        Enlace al sitio del editor: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+        <div class="bg-gray-900 m-6 p-2 rounded-xl p-3">
+            <p class="text-center text-1xl font-sans text-white">Editor html utilizado en esta página web: Visual Studio Code</p>
+            <p class="text-center text-1xl font-sans text-white">Enlace al sitio del editor: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+            <br>
+            <p class="text-center text-1xl font-sans text-white">Framework de estilo utilizado: Tailwind CSS</p>
+            <p class="text-center text-1xl font-sans text-white">Enlace al sitio del framework de estilo: https://tailwindcss.com/</p>
+        </div>
     </footer>
 
 </body>
-
 </html>
