@@ -4,21 +4,21 @@ let precioCuboRubik = 382;
 let precioFunkoPop = 447;
 let precioHotWheels = 99;
 
-document.log(precioCuboRubik);
+console.log(precioCuboRubik);
 
 //Función para calcular la cuenta
 function calcularCuenta() {
     let cuentaFinal = 0;
 
-    let cantCubo = document.getElementById("cantidadCuboRubik");
-    let cantFunko = document.getElementById("cantidadFunkoPop");
-    let cantHotWheels = document.getElementById("cantidadHotWheels");
+    let cantCubo = document.getElementById("cantidadCuboRubik").value;
+    let cantFunko = document.getElementById("cantidadFunkoPop").value;
+    let cantHotWheels = document.getElementById("cantidadHotWheels").value;
 
     cuentaFinal += (cantCubo * precioCuboRubik);
     cuentaFinal += (cantFunko * precioFunkoPop);
     cuentaFinal += (cantHotWheels * precioHotWheels);
 
-    document.log(cuentaFinal);
+    console.log(cuentaFinal);
 };
 
 document.getElementById("botonCuenta").onclick = calcularCuenta;
