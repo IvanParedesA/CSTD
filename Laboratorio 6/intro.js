@@ -1,3 +1,13 @@
+//Evento de javascript para cambiar el color del título
+document.getElementById("sugerencia").onkeyup = () => {
+
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+
+    document.getElementById("sugerencia").style.color = `rgb(${red}, ${green}, ${blue})`;
+}
+
 //Declarar los precios de los productos:
 
 let precioCuboRubik = 382;
@@ -25,4 +35,5 @@ function calcularCuenta() {
     document.write("<br>" + "Tu cuenta final es de: $" + cuentaFinal);
 };
 
+//Mandar a llamar la función de calcular la cuenta
 document.getElementById("botonCuenta").onclick = calcularCuenta;
