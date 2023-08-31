@@ -166,8 +166,20 @@ const server = http.createServer( (request, response) => {
                 </div>
             </header>
             <main>
-                <div class="flex justify-center">
-                    <h1 class="title">Aquí es donde estará el registro de coleccionables</h1>
+                <div class="bg-gray-600 m-6 p-4 mx-96 rounded-xl text-center">
+                    <form action="/new" method="POST">
+                        <label for="nombre">Nombre del coleccionable</label>
+                        <input id="nombre" name="nombre" class="input" type="text" placeholder="Funko Pop Batman">
+                        <br>
+                        <br>
+                        <label for="precio">Valor del coleccionable</label>
+                        <input id="valor" name="valor" class="input" type="text" placeholder="$420">
+                        <br>
+                        <br>
+                        <button id="registrar" name="registrar" type="submit" value="Registrar" class="bg-purple-500 hover:bg-red-500 w-48 h-12 rounded-full">
+                            Registrar
+                        </button>
+                    </form>
                 </div>
             </main>
             <!--Pie de página-->
