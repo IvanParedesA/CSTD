@@ -35,7 +35,7 @@ const server = http.createServer( (request, response) => {
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://cdn.tailwindcss.com"></script>
-            <title>Laboratorio 6</title>
+            <title>Coleccionables</title>
         </head>
         
         <body>
@@ -92,7 +92,7 @@ const server = http.createServer( (request, response) => {
                             <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
                                 <p class="text-2xl font-sans text-black">Hot Wheels</p>
                                 <br>
-                                <img class="mx-auto" src="https://static.wikia.nocookie.net/hotwheels/images/f/f5/Ferrari_458_Italia_01.JPG/revision/latest?cb=20140525223239" alt="Hot Wheels" width="300px">
+                                <img class="mx-auto" src="https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg" alt="Hot Wheels" width="300px">
                                 <br>
                                 <p class="text-2xl font-sans text-black">Precio: $99</p>
                                 <br>
@@ -127,29 +127,6 @@ const server = http.createServer( (request, response) => {
                         <input id="sugerencia" type="text" placeholder="Tarjetas Pokemon">
                     </p>
                 </div>
-        
-                <!--Columna 3: Hot Wheels-->
-                <div class="bg-gray-600 m-6 p-4 rounded-xl">
-                    <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
-                        <p class="text-2xl font-sans text-black">Preguntas</p>
-                        <br>
-                        <ul class="list-disc list-inside">
-                            <li>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las 
-                            formas antes de enviar los datos al servidor?</li>
-                            <p>- Porque si los datos no son correctos, podrían generar errores una vez que el servidor los reciba.</p>
-                            <br>
-                            <li>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</li>
-                            <p>- Sobreescribiendo el código en la vista de inspeccionar.</p>
-                            <br>
-                            <li>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera 
-                                pregunta dice que es una buena práctica?</li>
-                            <p>Porque la mayoría de los usuarios no lo saben hacer y por ende sigue sirviendo en la mayoría 
-                                de los casos
-                            </p>
-                        </ul>
-        
-                    </div>
-                </div>
             </main>
         
             <!--Pie de página-->
@@ -165,7 +142,50 @@ const server = http.createServer( (request, response) => {
         
         </body>
         </html>
-        `)
+        `);
+
+        response.end();
+
+    } else if(request.url == "/new") {
+        
+        response.write(`
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://cdn.tailwindcss.com"></script>
+            <title>Coleccionables</title>
+        </head>
+        <body>
+            <!--Encabezado-->
+            <header>
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 m-6 p-2 rounded-xl p-3">
+                    <h1 class="text-6xl font-sans text-black text-center" id="Titulo" name="Titulo">Registro de coleccionables</h1>
+                </div>
+            </header>
+            <main>
+                <div class="flex justify-center">
+                    <h1 class="title">Aquí es donde estará el registro de coleccionables</h1>
+                </div>
+            </main>
+            <!--Pie de página-->
+            <footer>
+                <div class="bg-gray-900 m-6 p-2 rounded-xl p-3">
+                    <p class="text-center text-1xl font-sans text-white">Editor html utilizado en esta página web: Visual Studio Code</p>
+                    <p class="text-center text-1xl font-sans text-white">Enlace al sitio del editor: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+                    <br>
+                    <p class="text-center text-1xl font-sans text-white">Framework de estilo utilizado: Tailwind CSS</p>
+                    <p class="text-center text-1xl font-sans text-white">Enlace al sitio del framework de estilo: https://tailwindcss.com/</p>
+                </div>
+            </footer>
+        </body>
+        </html>
+        `);
+
+        response.end();
+
     }
 
 });
