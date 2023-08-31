@@ -186,6 +186,37 @@ const server = http.createServer( (request, response) => {
 
         response.end();
 
+    } else {
+
+        response.write(`
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://cdn.tailwindcss.com"></script>
+            <title>Coleccionables</title>
+        </head>
+        <body>
+            <!--Encabezado-->
+            <header>
+                <div class="bg-red-500 m-6 p-2 rounded-xl p-3">
+                    <h1 class="text-6xl font-sans text-black text-center" id="Titulo" name="Titulo">Error 404: Not Found</h1>
+                </div>
+            </header>
+            <main>
+                <div class="flex justify-center">
+                    <h1 class="text-3xl font-sans text-black text-center" id="Titulo" name="Titulo">
+                        Ese sí es un coleccionable muy raro. 
+                    </h1>
+                </div>
+            </main>
+        </body>
+        </html>
+        `);
+
+        response.end();
     }
 
 });
