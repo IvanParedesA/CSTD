@@ -21,6 +21,7 @@ const server = http.createServer( (request, response) => {
     //request te muestra todo lo que lleva el objeto
     //.url es un atributo que te muestra lo que lleva la url 
     console.log(request.url);
+    console.log(request.method);
 
     if (request.url == "/") {
 
@@ -146,7 +147,7 @@ const server = http.createServer( (request, response) => {
 
         response.end();
 
-    } else if(request.url == "/new") {
+    } else if(request.url == "/new" && request.method == "GET") {
         
         response.write(`
         <!DOCTYPE html>
@@ -172,8 +173,8 @@ const server = http.createServer( (request, response) => {
                         <input id="nombre" name="nombre" class="input" type="text" placeholder="Funko Pop Batman">
                         <br>
                         <br>
-                        <label for="precio">Valor del coleccionable</label>
-                        <input id="valor" name="valor" class="input" type="text" placeholder="$420">
+                        <label for="valor">Valor del coleccionable</label>
+                        <input id="valor" name="valor" class="input" type="number" placeholder="420">
                         <br>
                         <br>
                         <button id="registrar" name="registrar" type="submit" value="Registrar" class="bg-purple-500 hover:bg-red-500 w-48 h-12 rounded-full">
@@ -196,6 +197,11 @@ const server = http.createServer( (request, response) => {
         </html>
         `);
 
+        response.end();
+
+    } else if(request.url == "/new" && request.method == "POST") {
+        
+        response.write(`El coleccionable fue registrado`);
         response.end();
 
     } else {
