@@ -200,11 +200,34 @@ const server = http.createServer( (request, response) => {
         response.end();
 
     } else if(request.url == "/new" && request.method == "POST") {
-        
-        response.write(`El coleccionable fue registrado`);
-        response.end();
+
+        const datos = [];
+
+        request.on('data', (dato) => {
+            //console.log(dato);
+            datos.push(dato);
+        });
+
+        return request.on('end', () => {
+
+            const datos_completos = Buffer.concat(datos).toString();
+            console.log(datos_completos);
+            const primera_variable = datos_completos.split('&')[0];
+            console.log(primera_variable);
+            const primer_valor = primera_variable.split('=')[1];
+            console.log(primer_valor);
+            const segunda_variable = datos_completos.split('&')[1];
+            console.log(segunda_variable);
+            const segundo_valor = segunda_variable.split('=')[1];
+            console.log(segundo_valor);
+            
+            response.write(`El coleccionable fue registrado`);
+            return response.end();
+        });
 
     } else {
+
+        response.statusCode = 404;
 
         response.write(`
         <!DOCTYPE html>
