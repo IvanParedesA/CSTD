@@ -1,3 +1,23 @@
+//Arreglo de coleccionables
+
+let coleccionables = [
+    {
+        nombre: "Cubo de Rubik",
+        imagen: "https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg",
+        valor: 382
+    },
+    {
+        nombre: "Funko Pop",
+        imagen: "https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg",
+        valor: 447
+    },
+    {
+        nombre: "Hot Wheels",
+        imagen: "https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg",
+        valor: 99
+    }
+]
+
 //fs es el módulo de filesystem de node, 
 //que sirve para acceder a los métodos para manipular el sistema de archivos
 const filesystem = require('fs');
@@ -28,7 +48,7 @@ const server = http.createServer( (request, response) => {
         //Avisa que el tipo de contenido que se va a mostrar es html
         response.setHeader('Content-Type', 'text/html');
 
-        response.write(`
+        let html = `
         <!DOCTYPE html>
         <html lang="es">
         <head>
@@ -51,59 +71,31 @@ const server = http.createServer( (request, response) => {
             <main>
         
                 <!--Columnas para los productos-->
-                <div class="grid grid-cols-3 gap-3 mx-auto flex items-center">
-        
-                    <!--Columna 1: Cubo de Rubik-->
-                    <div>
-                        <div class="bg-gray-600 m-6 p-4 rounded-xl text-center">
-                            <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
-                                <p class="text-2xl font-sans text-black">Cubo de rubik</p>
-                                <br>
-                                <img class="mx-auto" src="https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg" alt="Cubo de rubik" width="300px">
-                                <br>
-                                <p class="text-2xl font-sans text-black">Precio: $382</p>
-                                <br>
-                                <p class="text-1xl font-sans text-black"> Cantidad:
-                                    <input type="number" id="cantidadCuboRubik" name="cantidadCuboRubik" placeholder="0" min="0" max="100" class="w-16">
-                                </p>
+                <div class="grid grid-cols-3 gap-3 mx-auto flex items-center">`;
+
+                    for(let coleccionable of coleccionables) {
+                        html += 
+                        `
+                        <div>
+                            <div class="bg-gray-600 m-6 p-4 rounded-xl text-center">
+                                <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
+                                    <p class="text-2xl font-sans text-black">${coleccionable.nombre}</p>
+                                    <br>
+                                    <img class="mx-auto" src="${coleccionable.imagen}" alt="${coleccionable.nombre}" width="300px">
+                                    <br>
+                                    <p class="text-2xl font-sans text-black">Precio: $${coleccionable.valor}</p>
+                                    <br>
+                                    <p class="text-1xl font-sans text-black"> Cantidad:
+                                        <input type="number" id="cantidad${coleccionable.nombre}" name="cantidad${coleccionable.nombre}" placeholder="0" min="0" max="100" class="w-16">
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-        
-                    <!--Columna 2: Funko Pop-->
-                    <div>
-                        <div class="bg-gray-600 m-6 p-4 rounded-xl text-center">
-                            <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
-                                <p class="text-2xl font-sans text-black">Funko Pop</p>
-                                <br>
-                                <img class="mx-auto" src="https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg" alt="Funko pop" width="300px">
-                                <br>
-                                <p class="text-2xl font-sans text-black">Precio: $447</p>
-                                <br>
-                                <p class="text-1xl font-sans text-black"> Cantidad:
-                                    <input type="number" id="cantidadFunkoPop" name="cantidadFunkoPop" placeholder="0" min="0" max="100" class="w-16">
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!--Columna 3: Hot Wheels-->
-                    <div>
-                        <div class="bg-gray-600 m-6 p-4 rounded-xl text-center">
-                            <div class="container bg-gray-300 mx-auto p-4 rounded-xl">
-                                <p class="text-2xl font-sans text-black">Hot Wheels</p>
-                                <br>
-                                <img class="mx-auto" src="https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg" alt="Hot Wheels" width="300px">
-                                <br>
-                                <p class="text-2xl font-sans text-black">Precio: $99</p>
-                                <br>
-                                <p class="text-1xl font-sans text-black"> Cantidad:
-                                    <input type="number" id="cantidadHotWheels" name="cantidadHotWheels" placeholder="0" min="0" max="100" class="w-16">
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-        
+                        `;
+                    }
+
+                html += 
+                `
                 </div>
         
                 <!--Botón para calcular cuenta total-->
@@ -143,8 +135,9 @@ const server = http.createServer( (request, response) => {
         
         </body>
         </html>
-        `);
+        `;
 
+        response.write(html);
         response.end();
 
     } else if(request.url == "/new" && request.method == "GET") {
@@ -212,16 +205,22 @@ const server = http.createServer( (request, response) => {
 
             const datos_completos = Buffer.concat(datos).toString();
             console.log(datos_completos);
-            const primera_variable = datos_completos.split('&')[0];
-            console.log(primera_variable);
-            const primer_valor = primera_variable.split('=')[1];
-            console.log(primer_valor);
-            const segunda_variable = datos_completos.split('&')[1];
-            console.log(segunda_variable);
-            const segundo_valor = segunda_variable.split('=')[1];
-            console.log(segundo_valor);
+            const nombre = datos_completos.split('&')[0];
+            console.log(nombre);
+            const nombreInput = nombre.split('=')[1];
+            console.log(nombreInput);
+            const valor = datos_completos.split('&')[1];
+            console.log(valor);
+            const valorInput = valor.split('=')[1];
+            console.log(valorInput);
             
             response.write(`El coleccionable fue registrado`);
+            coleccionables.push({
+                nombre: nombreInput,
+                imagen: "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg",
+                valor: valorInput
+            })
+
             return response.end();
         });
 
@@ -261,6 +260,10 @@ const server = http.createServer( (request, response) => {
     }
 
 });
+
+server.listen(3000);
+
+//Funciones de Javascript que se dejaron de usar:
 
 /*
 //Evento de javascript para cambiar el color del título
@@ -307,4 +310,3 @@ function calcularCuenta() {
 document.getElementById("botonCuenta").onclick = calcularCuenta;
 
 */
-server.listen(3000);
