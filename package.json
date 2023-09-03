@@ -1,0 +1,15 @@
+{
+  "name": "cstd",
+  "version": "1.0.0",
+  "description": "\"Laboratorios del curso TC2005B ago-dic 2023\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "tc2005b"
+  ],
+  "author": "Iván Paredes",
+  "license": "MIT"
+}
