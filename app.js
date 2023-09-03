@@ -5,6 +5,24 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+let coleccionables = [
+    {
+        nombre: "Cubo de Rubik",
+        imagen: "https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg",
+        valor: 382
+    },
+    {
+        nombre: "Funko Pop",
+        imagen: "https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg",
+        valor: 447
+    },
+    {
+        nombre: "Hot Wheels",
+        imagen: "https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg",
+        valor: 99
+    }
+]
+
 //Middleware
 app.use((request, response, next) => {
     console.log('Middleware!');
@@ -68,6 +86,13 @@ app.get('/new', (request, response, next) => {
 
 app.post('/new', (request, response, next) => {
     console.log(request.body);
+
+    coleccionables.push({
+        nombre: request.body.nombre,
+        imagen: "https://www.instyle.com/thmb/vZCEkHB1nBMIes2tcKTUAMP0zf0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BarbiePosterEmbed-de7c886812184414977730e920d77a65.jpg",
+        valor: request.body.valor,
+    });
+
     response.redirect('/')
 });
 
