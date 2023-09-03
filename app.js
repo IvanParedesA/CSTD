@@ -89,7 +89,7 @@ app.post('/new', (request, response, next) => {
 
     coleccionables.push({
         nombre: request.body.nombre,
-        imagen: "https://www.instyle.com/thmb/vZCEkHB1nBMIes2tcKTUAMP0zf0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BarbiePosterEmbed-de7c886812184414977730e920d77a65.jpg",
+        imagen: "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg",
         valor: request.body.valor,
     });
 
@@ -187,6 +187,8 @@ app.get('/', (request, response, next) => {
     </body>
     </html>
     `;
+
+    response.send(html);
     
 });
 
