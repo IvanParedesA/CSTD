@@ -1,55 +1,15 @@
 const express = require('express');
-
 const router = express.Router();
-
 const coleccionablesController = require('../controllers/coleccionables.controller');
 
-let coleccionables = [
-    {
-        nombre: "Cubo de Rubik",
-        imagen: "https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg",
-        valor: 382
-    },
-    {
-        nombre: "Funko Pop",
-        imagen: "https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg",
-        valor: 447
-    },
-    {
-        nombre: "Hot Wheels",
-        imagen: "https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg",
-        valor: 99
-    }
-];
-
-//Ruta GET /   (Raiz)
-router.get('/', (request, response, next) => {
-    response.render('coleccionables/list.ejs', {
-        coleccionables: coleccionables
-    });
-});
-
-//Ruta GET /add
 router.get('/add', coleccionablesController.get_add);
 
-//Ruta POST /new
-router.post('/add', (request, response, next) => {
+router.post('/add', coleccionablesController.post_add);
 
-    console.log(request.body);
+router.get('/list', coleccionablesController.get_list);
 
-    coleccionables.push({
-        nombre: request.body.nombre,
-        imagen: "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg",
-        valor: request.body.valor,
-    });
+router.get('/', coleccionablesController.get_list);
 
-    response.redirect('/coleccionables')
-});
-
-//Ruta GET /pregunta
-router.get('/pregunta', (request, response, next) => {
-
-    response.render('coleccionables/pregunta'); 
-});
+router.get('/pregunta', coleccionablesController.get_pregunta);
 
 module.exports = router;
