@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const path = require('path');
+const coleccionablesController = require('../controllers/coleccionables.controller');
 
 let coleccionables = [
     {
@@ -29,14 +29,12 @@ router.get('/', (request, response, next) => {
     });
 });
 
-//Ruta GET /new
-router.get('/new', (request, response, next) => {
-
-    response.sendFile(path.join(__dirname, '..', 'views', 'new.html'));
-});
+//Ruta GET /add
+router.get('/add', coleccionablesController.get_add);
 
 //Ruta POST /new
-router.post('/new', (request, response, next) => {
+router.post('/add', (request, response, next) => {
+
     console.log(request.body);
 
     coleccionables.push({
