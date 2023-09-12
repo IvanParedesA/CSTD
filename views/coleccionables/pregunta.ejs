@@ -16,34 +16,21 @@
     </header>
     <main>
         <div class="bg-gray-600 m-6 p-4 rounded-xl">
-            <p class="text-2xl font-sans text-white">¿Qué otros templating engines existen para node?</p>
+            <p class="text-2xl font-sans text-white">¿Qué beneficios encuentras en el estilo MVC?</p>
             <br>
-            <p class="text-1xl font-sans text-white">Template engine es una implementación de software que nos 
-                permite mezclar datos con una plantilla con el fin de generar un documento que será renderizado en 
-                el navegador. Algunos de los template engines más conocidos son:
+            <p class="text-1xl font-sans text-white">El estilo MVC te permite tener organización en los diferentes
+                archivos que conforman tu aplicación. Básicamente estamos transformando el código "espagueti" en
+                lasaña. Cada módulo de MVC tiene su propia función y al estar dividio en diferentes partes de código
+                es fácil darle mantenimiento pues sabes exactamente en qué sección debes hacer los cambios.
             </p>
-            <ul class="list-disc font-sans text-white p-4">
-                <li>Handlebars (para JavaScript)</li>
-                <li>Twig y Blade (para Laravel / PHP)</li>
-                <li>dependencies (dependencias)</li>
-                <li>JSP (para Java)</li>
-                <li>Ninja (de Python).</li>
-            </ul>
-            <p class="text-2xl font-sans text-white">Referencia</p>
             <br>
-            <p class="text-1xl font-sans text-white">https://platzi.com/clases/1437-express-js/15702-que-es-y-como-crear-tu-propio-template-engine/
+            <p class="text-2xl font-sans text-white">¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</p>
+            <br>
+            <p class="text-1xl font-sans text-white">La única desventaja que podría considerar es que si crece demasiado
+                tu aplicación tal vez podrías llegar a perderte entre tantos archivos y por lo mismo para crear una función
+                necesitas editar o crear archivos en carpetas distintas. Tal vez esa cantidad de saltos puede hacer que te
+                pierdas o que resulte tedioso.
             </p>
         </div>
-    </main>
-    <!--Pie de página-->
-    <footer>
-        <div class="bg-gray-900 m-6 p-2 rounded-xl p-3">
-            <p class="text-center text-1xl font-sans text-white">Editor html utilizado en esta página web: Visual Studio Code</p>
-            <p class="text-center text-1xl font-sans text-white">Enlace al sitio del editor: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
-            <br>
-            <p class="text-center text-1xl font-sans text-white">Framework de estilo utilizado: Tailwind CSS</p>
-            <p class="text-center text-1xl font-sans text-white">Enlace al sitio del framework de estilo: https://tailwindcss.com/</p>
-        </div>
-    </footer>
-</body>
-</html>
+
+    <%- include('../includes/foot.ejs') %>
