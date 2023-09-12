@@ -13,6 +13,19 @@ app.use(bodyParser.urlencoded({extended: false}));
 //Middleware
 app.use((request, response, next) => {
     console.log('Middleware!');
+
+    //Para acceder a la información de las cookies
+    const cookies = request.get('Cookie');
+
+    //String con toda la información de las cookies
+    console.log(cookies); 
+
+    //Para obtener el valor de la primera cookie
+    console.log(cookies.split('=')[1]);
+
+    //Para crear una nueva cookie
+    response.setHeader('Set-Cookie', 'ultimo_acceso=' + new Date() + '; HttpOnly');
+    
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
 
