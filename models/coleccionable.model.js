@@ -2,16 +2,6 @@ const db = require('../util/database');
 
 let coleccionables = [
     {
-        nombre: "Cubo de Rubik",
-        imagen: "https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg",
-        valor: 382
-    },
-    {
-        nombre: "Funko Pop",
-        imagen: "https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg",
-        valor: 447
-    },
-    {
         nombre: "Hot Wheels",
         imagen: "https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg",
         valor: 99
@@ -29,7 +19,9 @@ module.exports = class Coleccionable {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        coleccionables.push(this);
+        return db.execute(
+            'INSERT INTO coleccionables(nombre, imagen, valor) VALUES (?, ?, ?)', 
+            [this.nombre, this.imagen, this.valor]);
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.

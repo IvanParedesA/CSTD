@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2023 a las 05:44:21
+-- Tiempo de generación: 13-09-2023 a las 06:26:42
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -36,6 +36,15 @@ CREATE TABLE `coleccionables` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
+-- Volcado de datos para la tabla `coleccionables`
+--
+
+INSERT INTO `coleccionables` (`id`, `nombre`, `imagen`, `valor`, `created_at`) VALUES
+(1, 'Cubo de Rubik', 'https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg', 382, '2023-09-13 04:20:15'),
+(2, 'Funko Pop', 'https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg', 447, '2023-09-13 04:20:15'),
+(3, 'Funko Pop Sergio Perez', 'https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg', 899, '2023-09-13 04:23:51');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -53,7 +62,7 @@ ALTER TABLE `coleccionables`
 -- AUTO_INCREMENT de la tabla `coleccionables`
 --
 ALTER TABLE `coleccionables`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

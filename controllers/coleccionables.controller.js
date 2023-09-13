@@ -16,9 +16,13 @@ exports.post_add = (request, response, next) => {
         valor: request.body.valor,
     });
 
-    coleccionable.save();
-
-    response.redirect('/coleccionables');
+    coleccionable.save()
+        .then(() => {
+            return response.redirect('/coleccionables');
+        }).catch((error) => {
+            console.log(error);
+            response.redirect('/users/login');
+        });
 };
 
 exports.get_list = (request, response, next) => {
@@ -49,8 +53,7 @@ exports.get_list = (request, response, next) => {
         }).catch((error) => {
             console.log(error);
             response.redirect('/users/login');
-        }
-    );
+        });
 }
 
 exports.get_pregunta = (request, response, next) => {
