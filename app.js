@@ -23,15 +23,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use((request, response, next) => {
     console.log('Middleware!');
 
-    //Para acceder a la información de las cookies
-    const cookies = request.get('Cookie');
-
-    //String con toda la información de las cookies
-    console.log(cookies); 
-
-    //Para obtener el valor de la primera cookie
-    console.log(cookies.split('=')[1]);
-
     //Para crear una nueva cookie
     response.setHeader('Set-Cookie', 'ultimo_acceso=' + new Date() + '; HttpOnly');
     
@@ -41,6 +32,10 @@ app.use((request, response, next) => {
 const rutasColeccionables = require('./routes/coleccionables.routes');
 
 app.use('/coleccionables', rutasColeccionables);
+
+const rutasUsuarios = require('./routes/users.routes');
+
+app.use('/users', rutasUsuarios);
 
 //Ruta de error 404
 app.use((request, response, next) => {
