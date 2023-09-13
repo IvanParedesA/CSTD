@@ -1,3 +1,5 @@
+const db = require('../util/database');
+
 let coleccionables = [
     {
         nombre: "Cubo de Rubik",
@@ -32,7 +34,14 @@ module.exports = class Coleccionable {
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return coleccionables;
+        return db.execute('SELECT * FROM coleccionables')
+        .then(([rows, fieldData]) => {
+            console.log(rows);
+            console.log(fieldData);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
     }
 
 }
