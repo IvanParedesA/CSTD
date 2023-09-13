@@ -16,20 +16,20 @@
     </header>
     <main>
         <div class="bg-gray-600 m-6 p-4 rounded-xl">
-            <p class="text-2xl font-sans text-white">¿Qué beneficios encuentras en el estilo MVC?</p>
+            <p class="text-2xl font-sans text-white">¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</p>
             <br>
-            <p class="text-1xl font-sans text-white">El estilo MVC te permite tener organización en los diferentes
-                archivos que conforman tu aplicación. Básicamente estamos transformando el código "espagueti" en
-                lasaña. Cada módulo de MVC tiene su propia función y al estar dividio en diferentes partes de código
-                es fácil darle mantenimiento pues sabes exactamente en qué sección debes hacer los cambios.
+            <p class="text-1xl font-sans text-white">Ya que la capa del modelo se encarga de hacer el procesamiento de datos, 
+                es lógico que implementemos las consultas de sql ahí para obtener información de la bd. De esta manera también
+                puedes tener más orden y saber que el código sql estará ahí.
             </p>
             <br>
-            <p class="text-2xl font-sans text-white">¿Encuentras alguna desventaja en el estilo arquitectónico MVC?</p>
+            <p class="text-2xl font-sans text-white">¿Qué es SQL injection y cómo se puede prevenir?</p>
             <br>
-            <p class="text-1xl font-sans text-white">La única desventaja que podría considerar es que si crece demasiado
-                tu aplicación tal vez podrías llegar a perderte entre tantos archivos y por lo mismo para crear una función
-                necesitas editar o crear archivos en carpetas distintas. Tal vez esa cantidad de saltos puede hacer que te
-                pierdas o que resulte tedioso.
+            <p class="text-1xl font-sans text-white">SQL injection es cuando un usuario malintencionado introduce código de sql
+                en una forma donde usualmente debe ir texto (como un nombre en un registro) y de esta manera puede ejecutar
+                operaciones en la base de datos sin autorización. En este caso, nosotros lo prevenimos con los signos de
+                interrogación (?, ?, ?) ya que de esta manera, cualquier cosa que se ponga se guardará como un valor (por 
+                ejemplo: string) y no se ejecutará como código de sql como tal.
             </p>
         </div>
 

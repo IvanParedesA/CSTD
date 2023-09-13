@@ -54,7 +54,7 @@ exports.get_list = (request, response, next) => {
             console.log(error);
             response.redirect('/users/login');
         });
-}
+};
 
 exports.get_pregunta = (request, response, next) => {
     response.render('coleccionables/pregunta'); 
