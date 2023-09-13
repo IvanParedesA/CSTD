@@ -39,7 +39,7 @@ exports.get_list = (request, response, next) => {
     //Imprime en la consola el tiempo transcurrido desde el último acceso en segundos.
     console.log(tiempo_transcurrido);
 
-    Coleccionable.fetchAll()
+    Coleccionable.fetch(request.params.id)
         .then(([rows, fieldData]) => {
             console.log(rows);
             console.log(fieldData);

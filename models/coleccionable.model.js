@@ -21,4 +21,13 @@ module.exports = class Coleccionable {
         return db.execute('SELECT * FROM coleccionables');
     }
 
+    static fetch(id) {
+        if (id) {
+            return db.execute('SELECT * FROM coleccionables WHERE id = ?', 
+            [id]);
+        } else {
+            return this.fetchAll();
+        }
+    }
+
 }

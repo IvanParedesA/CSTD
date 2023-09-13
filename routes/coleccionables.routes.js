@@ -6,6 +6,8 @@ router.get('/add', coleccionablesController.get_add);
 router.post('/add', coleccionablesController.post_add);
 
 router.get('/list', coleccionablesController.get_list);
+router.get('/list/:id', coleccionablesController.get_list);
+router.get('/:id', coleccionablesController.get_list);
 
 router.get('/', coleccionablesController.get_list);
 
