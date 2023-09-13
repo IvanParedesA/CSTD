@@ -1,13 +1,5 @@
 const db = require('../util/database');
 
-let coleccionables = [
-    {
-        nombre: "Hot Wheels",
-        imagen: "https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg",
-        valor: 99
-    }
-];
-
 module.exports = class Coleccionable {
 
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo

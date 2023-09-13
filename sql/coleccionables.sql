@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2023 a las 06:26:42
+-- Tiempo de generación: 13-09-2023 a las 06:33:04
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -42,7 +42,7 @@ CREATE TABLE `coleccionables` (
 INSERT INTO `coleccionables` (`id`, `nombre`, `imagen`, `valor`, `created_at`) VALUES
 (1, 'Cubo de Rubik', 'https://m.media-amazon.com/images/I/81XkUCfu0mL.jpg', 382, '2023-09-13 04:20:15'),
 (2, 'Funko Pop', 'https://m.media-amazon.com/images/I/81CnvOG8+YL._AC_UF894,1000_QL80_.jpg', 447, '2023-09-13 04:20:15'),
-(3, 'Funko Pop Sergio Perez', 'https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg', 899, '2023-09-13 04:23:51');
+(3, 'Hot Wheels', 'https://globaldiecastdirect.com/62549-thickbox_default/hot-wheels-aston-martin-one-77-coupe.jpg', 99, '2023-09-13 04:30:02');
 
 --
 -- Índices para tablas volcadas
