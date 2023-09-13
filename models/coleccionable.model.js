@@ -34,14 +34,7 @@ module.exports = class Coleccionable {
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return db.execute('SELECT * FROM coleccionables')
-        .then(([rows, fieldData]) => {
-            console.log(rows);
-            console.log(fieldData);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+        return db.execute('SELECT * FROM coleccionables');
     }
 
 }

@@ -35,11 +35,22 @@ exports.get_list = (request, response, next) => {
     //Imprime en la consola el tiempo transcurrido desde el último acceso en segundos.
     console.log(tiempo_transcurrido);
 
-    response.render('coleccionables/list.ejs', {
-        coleccionables: Coleccionable.fetchAll(),
-        tiempo_transcurrido: tiempo_transcurrido,
-        username: request.session.username || '',
-    });
+    Coleccionable.fetchAll()
+        .then(([rows, fieldData]) => {
+            console.log(rows);
+            console.log(fieldData);
+
+            return response.render('coleccionables/list.ejs', {
+                coleccionables: rows,
+                tiempo_transcurrido: tiempo_transcurrido,
+                username: request.session.username || '',
+            });
+        
+        }).catch((error) => {
+            console.log(error);
+            response.redirect('/users/login');
+        }
+    );
 }
 
 exports.get_pregunta = (request, response, next) => {
