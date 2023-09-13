@@ -1,5 +1,4 @@
 const Coleccionable = require('../models/coleccionable.model');
-const Modelo = require('../models/coleccionable.model');
 
 exports.get_add = (request, response, next) => {
     response.render('coleccionables/add.ejs', {
