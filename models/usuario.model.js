@@ -18,4 +18,9 @@ module.exports = class Usuario {
                 [this.username, password_cifrado, this.nombre]);
         }).catch((error) => {console.log(error)}); 
     }
+
+    static fetchOne(username) {
+        return db.execute('SELECT * FROM usuarios WHERE username = ?' , 
+            [username]);
+    }
 }
