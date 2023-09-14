@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 --
 
 INSERT INTO `privilegios` (`id`, `nombre`) VALUES
-(1, 'peliculas_ver'),
-(2, 'peliculas_agregar');
+(1, 'coleccionables_ver'),
+(2, 'coleccionables_agregar');
 
 --
 -- Volcado de datos para la tabla `roles`

@@ -5,6 +5,7 @@ exports.get_login = (request, response, next) => {
     response.render('users/login.ejs', {
         username: '',
         isLoggedIn: request.session.isLoggedIn || false,
+        privilegios: request.session.privilegios || [],
     });
 };
 
@@ -28,7 +29,7 @@ exports.post_login = (request, response, next) => {
                         console.log(privilegios);
                         return request.session.save(err => {
                             request.session.privilegios = privilegios;
-                            response.redirect('/peliculas');
+                            response.redirect('/coleccionables');
                         });
                     }).catch(error => {
                         console.log(error);
@@ -67,6 +68,7 @@ exports.get_add = (request, response, next) => {
         username: '',
         isLoggedIn: request.session.isLoggedIn || false,
         error: error,
+        privilegios: request.session.privilegios || [],
     });
 };
 
