@@ -16,21 +16,18 @@
     </header>
     <main>
         <div class="bg-gray-600 m-6 p-4 rounded-xl">
-            <p class="text-2xl font-sans text-white">¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</p>
+            <p class="text-2xl font-sans text-white">¿Qué otras formas de autentificación existen? </p>
             <br>
-            <p class="text-1xl font-sans text-white">Ya que la capa del modelo se encarga de hacer el procesamiento de datos, 
-                es lógico que implementemos las consultas de sql ahí para obtener información de la bd. De esta manera también
-                puedes tener más orden y saber que el código sql estará ahí.
-            </p>
+            <p class="text-1xl font-sans text-white">Se pueden dividir en 3:</p>
             <br>
-            <p class="text-2xl font-sans text-white">¿Qué es SQL injection y cómo se puede prevenir?</p>
+            <ul class="list-disc">
+                <li>Autenticación por conocimientos: basada en información que sólo conoce el usuario.</li>
+                <li>Autenticación por pertenencia: basada en algo que posee el usuario.</li>
+                <li>Autenticación por características: basada en alguna característica física del usuario. </li>
+            </ul>
+            <p class="text-2xl font-sans text-white">Referencia</p>
             <br>
-            <p class="text-1xl font-sans text-white">SQL injection es cuando un usuario malintencionado introduce código de sql
-                en una forma donde usualmente debe ir texto (como un nombre en un registro) y de esta manera puede ejecutar
-                operaciones en la base de datos sin autorización. En este caso, nosotros lo prevenimos con los signos de
-                interrogación (?, ?, ?) ya que de esta manera, cualquier cosa que se ponga se guardará como un valor (por 
-                ejemplo: string) y no se ejecutará como código de sql como tal.
-            </p>
+            <p class="text-1xl font-sans text-white">Info@citel. (s.f.). https://www.oas.org/en/citel/infocitel/2006/junio/seguridad_e.asp</p>
         </div>
 
     <%- include('../includes/foot.ejs') %>
