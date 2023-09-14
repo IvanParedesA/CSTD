@@ -4,6 +4,7 @@
 
 <div class="bg-gray-600 m-6 p-4 mx-96 rounded-xl text-center">
     <form action="/coleccionables/add" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="nombre">Nombre del coleccionable</label>
         <input id="nombre" name="nombre" class="input" type="text" placeholder="Funko Pop Batman">
         <br>

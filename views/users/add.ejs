@@ -15,6 +15,7 @@
 
 <div class="bg-gray-400 m-6 p-4 mx-96 rounded-xl text-center">
     <form action="/users/add" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="nombre">Nombre completo:</label>
         <br>
         <input id="nombre" name="nombre" class="input" type="text" placeholder="Iván Ricardo Paredes Avilez">
