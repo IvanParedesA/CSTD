@@ -14,10 +14,12 @@
         <div class="bg-gradient-to-r from-cyan-500 to-lime-500 m-6 p-2 rounded-xl p-3">
             <h1 class="text-6xl font-sans text-black text-center" id="Titulo" name="Titulo">Tienda de coleccionables</h1>
             <nav class="flex justify-center space-x-4">
+                <% if (isLoggedIn == true)  { %>
                 <a class="font-mediu px-3 py-2 text-slate-700 rounded-lg">Username: <%= username %></a>
                 <a href="/coleccionables" class="font-mediu px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Coleccionables</a>
                 <a href="/coleccionables/add" class="font-mediu px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Registrar</a>
                 <a href="/coleccionables/pregunta" class="font-mediu px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900">Preguntas</a>
+                <% } %>
                 <% if (isLoggedIn == false)  { %>
                     <a href="/users/add" class="font-mediu px-3 py-2 text-red text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"><strong>Registrarse</strong></a>
                     <a href="/users/login" class="font-mediu px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"><strong>Iniciar sesión</strong></a>

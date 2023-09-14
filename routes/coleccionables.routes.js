@@ -1,15 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const isAuth = require('../util/is-auth');
 const coleccionablesController = require('../controllers/coleccionables.controller');
 
-router.get('/add', coleccionablesController.get_add);
-router.post('/add', coleccionablesController.post_add);
+router.get('/add', isAuth, coleccionablesController.get_add);
+router.post('/add', isAuth, coleccionablesController.post_add);
 
-router.get('/list', coleccionablesController.get_list);
-router.get('/pregunta', coleccionablesController.get_pregunta);
-router.get('/list/:id', coleccionablesController.get_list);
-router.get('/:id', coleccionablesController.get_list);
+router.get('/list', isAuth, coleccionablesController.get_list);
+router.get('/pregunta', isAuth, coleccionablesController.get_pregunta);
+router.get('/list/:id', isAuth, coleccionablesController.get_list);
+router.get('/:id', isAuth, coleccionablesController.get_list);
 
-router.get('/', coleccionablesController.get_list);
+router.get('/', isAuth, coleccionablesController.get_list);
 
 module.exports = router;
