@@ -23,11 +23,19 @@ exports.post_login = (request, response, next) => {
                 if (doMatch) {
                     request.session.isLoggedIn = true;
                     request.session.user = user;
-                    return request.session.save(err => {
-                        response.redirect('/coleccionables');
+                    Usuario.getPrivilegios(user.id)
+                    .then(([privilegios, fieldData]) => {
+                        console.log(privilegios);
+                        return request.session.save(err => {
+                            request.session.privilegios = privilegios;
+                            response.redirect('/peliculas');
+                        });
+                    }).catch(error => {
+                        console.log(error);
+                        response.redirect('/users/login');
                     });
                 }
-                response.redirect('/users/login');
+                
             }).catch(error => {
                 console.log(error);
                 response.redirect('/users/login');

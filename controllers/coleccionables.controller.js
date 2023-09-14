@@ -28,6 +28,8 @@ exports.post_add = (request, response, next) => {
 
 exports.get_list = (request, response, next) => {
 
+    console.log(request.session.privilegios);
+
     //Extraer la fecha de último acceso almacenada en una cookie
     const ultimo_acceso = new Date(request.get('Cookie').split('=')[1]);
 
