@@ -16,18 +16,40 @@
     </header>
     <main>
         <div class="bg-gray-600 m-6 p-4 rounded-xl">
-            <p class="text-2xl font-sans text-white">¿Qué otras formas de autentificación existen? </p>
+            <p class="text-2xl font-sans text-white">¿En qué consiste el control de acceso basado en roles?</p>
             <br>
-            <p class="text-1xl font-sans text-white">Se pueden dividir en 3:</p>
+            <p class="text-1xl font-sans text-white">El RBAC te permite especificar a través de roles y privilegios
+                lo que van a poder hacer los usuarios en tu plataforma. Es decir, dependiendo el rol y los privilegios
+                que tenga, tendrá acceso a ciertas secciones, pero no a las que no tiene el permiso. De esta manera, 
+                diferentes usuarios pueden usar tu sistema, pero lo que pueden hacer dentro de él, queda límitado a
+                este modelo.
+            </p>
             <br>
-            <ul class="list-disc">
-                <li>Autenticación por conocimientos: basada en información que sólo conoce el usuario.</li>
-                <li>Autenticación por pertenencia: basada en algo que posee el usuario.</li>
-                <li>Autenticación por características: basada en alguna característica física del usuario. </li>
-            </ul>
+            <p class="text-2xl font-sans text-white">
+                Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las 
+                ventajas y desventajas de cada uno con respecto al control de acceso.
+            </p>
+            <br>
+            <p class="text-1xl font-sans text-white">
+                Solo los sistemas pequeños o aquellos que están hechos específicamente para un solo tipo de usuario, 
+                no utilizan RBAC, pues no hace falta identificar una jerarquía de estos. Por ejemplo: una calculadora.
+                La ventaja de esto es que está dirigido a un solo tipo de usuario y la complejidad de la programación
+                no se extiende a diferentes vistas entre usuarios
+            </p>
+            <br>
+            <p class="text-1xl font-sans text-white">
+                Por otro lado, un ejemplo de sistema de RBAC es Google docs, ya que dependiendo de si eres editor o lector
+                del documento en cuestión, cambia lo que puedes ver y hacer en la página. La ventaja de esto es que puedes
+                implementar una mayor seguridad restringiendo el acceso de ciertos usuarios a ciertas funciones.
+            </p>
+            <br>
             <p class="text-2xl font-sans text-white">Referencia</p>
             <br>
-            <p class="text-1xl font-sans text-white">Info@citel. (s.f.). https://www.oas.org/en/citel/infocitel/2006/junio/seguridad_e.asp</p>
+            <p class="text-1xl font-sans text-white">
+                Equipo editorial de IONOS. (2020). Role Based Access Control (RBAC): 
+                ¿Cómo funciona el control de acceso basado en roles? IONOS Digital Guide. 
+                https://www.ionos.mx/digitalguide/servidores/seguridad/que-es-el-role-based-access-control-rbac/
+            </p>
         </div>
 
     <%- include('../includes/foot.ejs') %>
