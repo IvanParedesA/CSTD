@@ -1,6 +1,18 @@
 <%- include('../includes/head.ejs') %>
 
 <h1 class="text-6xl font-sans text-black text-center" id="Titulo" name="Titulo">Registra tu usuario</h1>
+
+<% if(error) { %>
+    <article class="bg-red-200 m-6 p-4 mx-96 rounded-xl text-center">
+        <div>
+            <p>Oops... Hubo un error.</p>
+        </div>
+        <div>
+            <strong><%= error.sqlMessage %></strong>.
+        </div>
+    </article>
+<% } %>
+
 <div class="bg-gray-400 m-6 p-4 mx-96 rounded-xl text-center">
     <form action="/users/add" method="POST">
         <label for="nombre">Nombre completo:</label>

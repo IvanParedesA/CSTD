@@ -20,24 +20,35 @@ exports.get_logout = (request, response, next) => {
 };
 
 exports.get_add = (request, response, next) => {
+
+    let error = request.session.error || false;
+
+    if (error) {
+        request.session.error = false;
+    }
+
     response.render('users/add.ejs', {
         username: '',
         isLoggedIn: request.session.isLoggedIn || false,
+        error: error,
     });
 };
 
 exports.post_add = (request, response, next) => {
+
     const usuario = new Usuario({
         nombre: request.body.nombre,
         username: request.body.username,
         password: request.body.password,
     });
+
     usuario.save()
         .then(() => {
             return response.redirect('/users/login');
         }).catch((error) => {
             console.log(error);
-            response.redirect('/users/login');
+            request.session.error = error;
+            response.redirect('/users/add');
         });
 };
 
