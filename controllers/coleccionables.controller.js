@@ -3,6 +3,7 @@ const Coleccionable = require('../models/coleccionable.model');
 exports.get_add = (request, response, next) => {
     response.render('coleccionables/add.ejs', {
         username: request.session.username || '',
+        isLoggedIn: request.session.isLoggedIn || false,
     });
 };
 
@@ -48,6 +49,7 @@ exports.get_list = (request, response, next) => {
                 coleccionables: rows,
                 tiempo_transcurrido: tiempo_transcurrido,
                 username: request.session.username || '',
+                isLoggedIn: request.session.isLoggedIn || false,
             });
         
         }).catch((error) => {
@@ -57,5 +59,5 @@ exports.get_list = (request, response, next) => {
 };
 
 exports.get_pregunta = (request, response, next) => {
-    response.render('coleccionables/pregunta'); 
+    response.render('coleccionables/pregunta.ejs'); 
 };
