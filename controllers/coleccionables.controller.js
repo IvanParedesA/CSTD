@@ -11,10 +11,11 @@ exports.get_add = (request, response, next) => {
 exports.post_add = (request, response, next) => {
 
     console.log(request.body);
+    console.log(request.file);
 
     const coleccionable = new Coleccionable({
         nombre: request.body.nombre,
-        imagen: "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg",
+        imagen: request.file.filename,
         valor: request.body.valor,
     });
 
