@@ -3,7 +3,7 @@
 <h1 class="text-6xl font-sans text-black text-center" id="Titulo" name="Titulo">Registro de coleccionables</h1>
 
 <div class="bg-gray-600 m-6 p-4 mx-96 rounded-xl text-center">
-    <form action="/coleccionables/add" method="POST">
+    <form action="/coleccionables/add" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="nombre">Nombre del coleccionable</label>
         <input id="nombre" name="nombre" class="input" type="text" placeholder="Funko Pop Batman">
@@ -11,6 +11,9 @@
         <br>
         <label for="valor">Valor del coleccionable</label>
         <input id="valor" name="valor" class="input" type="number" placeholder="420">
+        <br>
+        <br>
+        <input type="file" name="imagen">
         <br>
         <br>
         <button id="registrar" name="registrar" type="submit" value="Registrar" class="bg-purple-500 hover:bg-red-500 w-48 h-12 rounded-full">
