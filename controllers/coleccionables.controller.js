@@ -63,6 +63,10 @@ exports.get_list = (request, response, next) => {
         });
 };
 
+exports.post_delete = (request, response, next) => {
+    response.status(200).json({message: "Respuesta asíncrona"});
+}
+
 exports.get_pregunta = (request, response, next) => {
     response.render('coleccionables/pregunta.ejs'); 
 };

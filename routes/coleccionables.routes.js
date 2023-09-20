@@ -7,10 +7,10 @@ const coleccionablesController = require('../controllers/coleccionables.controll
 
 router.get('/add', isAuth, canAgregarColeccionables, coleccionablesController.get_add);
 router.post('/add', isAuth, canAgregarColeccionables, coleccionablesController.post_add);
-
 router.get('/list', isAuth, canVerColeccionables, coleccionablesController.get_list);
 router.get('/pregunta', isAuth, canVerColeccionables, coleccionablesController.get_pregunta);
 router.get('/list/:id', isAuth, canVerColeccionables, coleccionablesController.get_list);
+router.post('/delete', coleccionablesController.post_delete);
 router.get('/:id', isAuth, canVerColeccionables, coleccionablesController.get_list);
 
 router.get('/', isAuth, canVerColeccionables, coleccionablesController.get_list);

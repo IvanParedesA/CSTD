@@ -1,4 +1,7 @@
 <%- include('../includes/head.ejs') %>
+
+    <input id="_csrf" type="hidden" name="_csrf" value="<%= csrfToken %>" >
+
     <!--Columnas para los productos-->
     <div class="grid grid-cols-3 gap-3 mx-auto flex items-center">
         <% if (coleccionables.length > 0) { %>
@@ -16,6 +19,7 @@
                             <p class="text-1xl font-sans text-black"> Cantidad:
                                 <input type="number" id="cantidad<%= coleccionable.nombre %>" name="cantidad<%= coleccionable.nombre %>" placeholder="0" min="0" max="100" class="w-16">
                             </p>
+                            <button class="bg-red-500 hover:bg-red-600 w-48 h-12 rounded-full" onclick=accion_asincrona("<%= coleccionable.id %>")>Quitar</button>
                         </div>
                     </div>
                 </div>
@@ -49,5 +53,7 @@
     </div>
 
     Tiempo desde el último acceso: <%= tiempo_transcurrido %> segundos.
+
+    <script src="/js/ajax_quitar.js"></script>
 
 <%- include('../includes/foot.ejs') %>
