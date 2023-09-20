@@ -14,8 +14,9 @@ const accion_asincrona = (id) => {
         //body: JSON.stringify(data)
     }).then(result => {
         console.log(result);
-//        return result.json(); //Regresa otra promesa
-//    }).then(data => {
+        return result.json(); //Regresa otra promesa
+    }).then(data => {
+        console.log(data);
         //Modificamos el DOM de nuestra página de acuerdo a los datos de la segunda promesa
         //...
     }).catch(err => {
