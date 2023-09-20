@@ -64,6 +64,8 @@ exports.get_list = (request, response, next) => {
 };
 
 exports.post_delete = (request, response, next) => {
+    console.log(request.body);
+    
     response.status(200).json({message: "Respuesta asíncrona"});
 }
 

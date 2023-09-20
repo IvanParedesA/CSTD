@@ -4,14 +4,16 @@ const accion_asincrona = (id) => {
     //El token de protección CSRF
     const csrf = document.getElementById('_csrf').value;
 
+    console.log(id);
+
     //función que manda la petición asíncrona
     fetch('/coleccionables/delete', {
         method: 'POST',
         headers: {
-            //'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
             'csrf-token': csrf
-        }
-        //body: JSON.stringify(data)
+        },
+        body: JSON.stringify(data)
     }).then(result => {
         console.log(result);
         return result.json(); //Regresa otra promesa
