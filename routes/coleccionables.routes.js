@@ -10,7 +10,7 @@ router.post('/add', isAuth, canAgregarColeccionables, coleccionablesController.p
 router.get('/list', isAuth, canVerColeccionables, coleccionablesController.get_list);
 router.get('/pregunta', isAuth, canVerColeccionables, coleccionablesController.get_pregunta);
 router.get('/list/:id', isAuth, canVerColeccionables, coleccionablesController.get_list);
-router.post('/delete', coleccionablesController.post_delete);
+router.post('/delete', isAuth, canAgregarColeccionables, coleccionablesController.post_delete);
 router.get('/:id', isAuth, canVerColeccionables, coleccionablesController.get_list);
 
 router.get('/', isAuth, canVerColeccionables, coleccionablesController.get_list);
