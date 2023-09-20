@@ -65,8 +65,18 @@ exports.get_list = (request, response, next) => {
 
 exports.post_delete = (request, response, next) => {
     console.log(request.body);
-    
-    response.status(200).json({message: "Respuesta asíncrona"});
+
+    Coleccionable.delete(request.body.id).then(()=>{
+        Coleccionable.fetchAll().then(([coleccionables, fieldData]) => {
+            response.status(200).json({coleccionables: coleccionables});
+        }).catch((error) => {
+            console.log(error);
+            response.status(200).json({message: "No se pudo eliminar"});
+        });
+    }).catch((error) => {
+        console.log(error);
+        response.status(200).json({message: "No se pudo eliminar"});
+    });
 }
 
 exports.get_pregunta = (request, response, next) => {

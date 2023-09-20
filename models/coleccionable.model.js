@@ -30,4 +30,8 @@ module.exports = class Coleccionable {
         }
     }
 
+    static delete(id) {
+        return db.execute('DELETE FROM coleccionables WHERE id = ?', [id]);
+    }
+
 }

@@ -1,6 +1,5 @@
 const accion_asincrona = (id) => {
 
-    //const mensaje = document.getElementById('mensaje').value;
     //El token de protección CSRF
     const csrf = document.getElementById('_csrf').value;
 
@@ -18,6 +17,7 @@ const accion_asincrona = (id) => {
         console.log(result);
         return result.json(); //Regresa otra promesa
     }).then(data => {
+        
         console.log(data);
         //Modificamos el DOM de nuestra página de acuerdo a los datos de la segunda promesa
         //...
